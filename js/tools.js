@@ -80,6 +80,7 @@ function newFile() {
   NewFile.click();
 }
 NewFile.addEventListener("change", (e) => {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
   const image = new Image();
   image.width = canvas.width.toString();
   image.height = canvas.height.toString();
@@ -92,5 +93,4 @@ NewFile.addEventListener("change", (e) => {
   image.onload = () => {
     ctx.drawImage(image, 0, 0, image.width, image.height);
   };
-  drawGrid(gridSquare_Size, ctx);
 });

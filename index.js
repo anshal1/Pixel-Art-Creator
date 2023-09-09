@@ -20,7 +20,6 @@ function confirm_size() {
   document.querySelector(".modal").style.display = "none";
   drawGrid(gridSquare_Size);
 }
-drawGrid(gridSquare_Size, ctx);
 grid_size_input.addEventListener("change", (e) => {
   if (!e.target.value) return;
   gridSquare_Size = Number(e.target.value);
@@ -28,7 +27,7 @@ grid_size_input.addEventListener("change", (e) => {
   localStorage.setItem("size", gridSquare_Size);
   drawGrid(e.target.value);
 });
-function drawGrid(gridSquareSize, ctx) {
+function drawGrid(gridSquareSize) {
   gridSquareSize = Number(gridSquareSize);
   if (!gridSquareSize) return;
   const number_of_horizontal_grid = canvas.height / gridSquareSize;
