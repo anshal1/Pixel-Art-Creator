@@ -1,0 +1,115 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  position: relative;
+}
+.canvas-holder {
+  overflow: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  position: relative;
+}
+#canvas {
+  border: 1px solid black;
+}
+.options {
+  height: 4rem;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  column-gap: 1rem;
+}
+
+.color-picker {
+  width: 2rem;
+  height: 2rem;
+  border: 2px solid rgb(177, 177, 177);
+  padding: 0px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.button {
+  all: unset;
+  padding: 4px 8px;
+  cursor: pointer;
+  background-color: grey;
+  color: white;
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+  font-weight: 600;
+}
+.button > svg {
+  fill: white !important;
+}
+.modal {
+  position: fixed;
+  width: 35rem;
+  height: 30rem;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 0px 14px 100vmax rgba(0, 0, 0, 0.358);
+  border: 2px solid black;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.input {
+  background-color: rgba(160, 160, 160, 0.121);
+  padding: 1rem;
+}
+.for-canvas {
+  display: block;
+  font-size: 24px;
+  margin-bottom: 1rem;
+}
+.input > label {
+  margin-left: 12px;
+  font-size: 18px;
+}
+.input > input {
+  width: 8rem;
+  height: 2rem;
+  outline: none;
+  padding: 12px;
+  border: 2px solid rgba(160, 160, 160, 0.61);
+  border-radius: 6px;
+  font-size: 16px;
+}
+.confirm {
+  all: unset;
+  margin-left: 12px;
+  margin-top: 2rem;
+  background-color: green;
+  padding: 6px 12px;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+}
+.drop-down {
+  display: none;
+  position: absolute;
+  padding: 4px;
+}
+.drop-down > button {
+  margin: 4px 0px;
+}
+.canvas-holder > canvas:nth-child(2) {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}

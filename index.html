@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./index.js" defer></script>
+    <script src="./js/colorPicker.js" defer></script>
+    <script src="./js/tools.js" defer></script>
+    <script src="./js/position.js" defer></script>
+    <link rel="stylesheet" href="./style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <div class="modal">
+      <div class="input">
+        <label for="canvas" class="for-canvas"> Canvas Size</label>
+        <label for="width">Width</label>
+        <input type="number" class="width" />
+        <label for="height">Height</label>
+        <input type="number" class="height" />
+        <br />
+        <button class="confirm" onclick="confirm_size();">Create</button>
+      </div>
+    </div> -->
+    <div class="conatiner">
+      <div class="options">
+        <input type="color" class="color-picker" name="" id="" />
+        <label for="">Tile Size</label>
+        <input type="number" class="grid-size" />
+        <button class="rect_tool button" title="Rectangle tool">
+          <svg
+            fill="#000000"
+            height="18px"
+            width="18px"
+            version="1.1"
+            id="Layer_1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 0 512 512"
+            xml:space="preserve"
+          >
+            <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+            <g
+              id="SVGRepo_tracerCarrier"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+
+            <g id="SVGRepo_iconCarrier">
+              <g>
+                <g>
+                  <path
+                    d="M501.333,96H10.667C4.779,96,0,100.779,0,106.667v298.667C0,411.221,4.779,416,10.667,416h490.667 c5.888,0,10.667-4.779,10.667-10.667V106.667C512,100.779,507.221,96,501.333,96z M490.667,394.667H21.333V117.333h469.333 V394.667z"
+                  />
+                </g>
+              </g>
+            </g>
+          </svg>
+        </button>
+        <button class="button eraser">eraser</button>
+        <button class="button save" onclick="Save();">Save</button>
+        <div class="options-dropdown">
+          <button class="dropdown-btn button" onclick="showDropdown();">
+            ...
+          </button>
+          <div class="drop-down">
+            <button class="button open-file" onclick="newFile();">
+              Open File
+            </button>
+            <input type="file" style="display: none" id="new-file" />
+          </div>
+        </div>
+      </div>
+      <div class="canvas-holder">
+        <canvas id="canvas"></canvas>
+      </div>
+    </div>
+  </body>
+</html>
